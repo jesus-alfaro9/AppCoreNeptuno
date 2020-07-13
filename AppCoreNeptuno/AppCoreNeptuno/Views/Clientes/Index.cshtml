@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AppCoreNeptuno.Models.Cliente>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Lista de Clientes</h1>
+
+
+<table class="table table-striped border" >
+    <tr class="table-secondary">
+        <th>ID</th>
+        <th>Razón Social</th>
+        <th>Dirección</th>
+        <th>Ciudad</th>
+        <th>País</th>
+        <th>Teléfono</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.IdCliente</td>
+            <td>@item.NombreCompañía</td>
+            <td>@item.Dirección</td>
+            <td>@item.Ciudad</td>
+            <td>@item.País</td>
+            <td>@item.Teléfono</td>
+        </tr>
+    }
+</table>
+
